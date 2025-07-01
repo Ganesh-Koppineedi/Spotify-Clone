@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <ul class="nav">
+                <li class="active"><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-search"></i> Search</li>
+                <li><i class="fas fa-book"></i> Your Library</li>
+            </ul>
+            <ul class="playlists">
+                <li><i class="fas fa-plus-square"></i> Create Playlist</li>
+                <li><i class="fas fa-heart"></i> Liked Songs</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="nav-buttons">
+                    <button class="arrow-left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="arrow-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <img src="assets/images/user.jpg" alt="User">
+                    <span>User</span>
+                </div>
+            </div>
+
+            <div class="playlist-section">
+                <h1>Welcome to Spotify</h1>
+                <div class="playlist-grid">
+                    <!-- Playlist items will be added dynamically -->
+                </div>
+            </div>
+
+            <div class="recently-played">
+                <h2>Recently played</h2>
+                <div class="recent-tracks">
+                    <!-- Recent tracks will be added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Player -->
+        <div class="player">
+            <div class="song-info">
+                <img src="" alt="Album Cover" id="album-cover">
+                <div class="song-details">
+                    <span id="song-title">No song selected</span>
+                    <span id="song-artist">Unknown artist</span>
+                </div>
+                <i class="far fa-heart"></i>
+            </div>
+            <div class="player-controls">
+                <div class="controls">
+                    <button id="shuffle"><i class="fas fa-random"></i></button>
+                    <button id="previous"><i class="fas fa-step-backward"></i></button>
+                    <button id="play"><i class="fas fa-play"></i></button>
+                    <button id="next"><i class="fas fa-step-forward"></i></button>
+                    <button id="repeat"><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
